@@ -4,7 +4,6 @@ let ID = 0;
 export default (ref: React.RefObject<HTMLElement>): IntersectionObserverEntry | undefined => {
 	const [entry, setEntry] = useState<IntersectionObserverEntry>();
 
-	console.log("asdadasd", entry);
 	useLayoutEffect(() => {
 		const el = ref.current;
 		const intersectionObserver = new IntersectionObserver(

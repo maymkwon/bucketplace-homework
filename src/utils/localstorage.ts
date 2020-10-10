@@ -1,6 +1,5 @@
 export class LocalStorageWorker {
 	add(key: string, value: any) {
-		console.log("ADD");
 		const target = this.get(key);
 		target.push(value);
 		this.store(key, target);

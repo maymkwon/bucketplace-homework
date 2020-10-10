@@ -61,7 +61,6 @@ const CardFeed: React.FC<{}> = () => {
 	useEffect(() => {
 		if (!isFilterShow) {
 			if (entry && entry.isIntersecting && entry.intersectionRatio > 0 && !isLoadingInitialData) {
-				console.log(entry);
 				setSize(size + 1);
 			}
 		}

@@ -7,7 +7,6 @@ import Toolbar from "../components/toolbar";
 import { CardData } from "../components/card/types";
 import useIntersection from "../hooks/useIntersection";
 import { LocalStorageWorker } from "../utils/localstorage";
-import { useToast } from "../components/toast/toastProvider";
 
 // api 관련
 // 따로 api쪽을 따로 관리를 하려고 했는데 최대한 간단하게 하려고 해당컴포넌트에 작성
@@ -42,7 +41,7 @@ const CardFeed: React.FC<{}> = () => {
 		(e: any) => {
 			setFilterShow(e.target.checked);
 		},
-		[isFilterShow]
+		[setFilterShow]
 	);
 
 	// 리스트조회
